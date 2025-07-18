@@ -77,19 +77,19 @@ export class RenderizadorBlessed {
     const grid: string[][] = Array.from({ length: motor.altura }, () =>
       Array(motor.largura).fill('.')
     );
-
+  
     for (const c of motor.construcoes) {
-      if (c.vida > 0) grid[c.y][c.x] = this.simbolo(c.nome);
+      if (c.vida > 0) grid[c.y][c.x] = this.simboloConstrucao(c.nome);
     }
-
+  
     for (const t of motor.tropas) {
       if (t.vida <= 0) continue;
-      grid[t.y][t.x] = this.simbolo(t.nome);
+      grid[t.y][t.x] = this.simboloTropa(t.nome);
     }
-
+  
     return [`{bold}Tick ${motor.tick}{/bold}`, '', ...grid.map(l => l.join(' '))].join('\n');
   }
-
+  
   private simbolo(nome: string): string {
     return `{black-bg}{white-fg}${nome[0].toUpperCase()}{/white-fg}{/black-bg}`;
   }
@@ -109,4 +109,13 @@ export class RenderizadorBlessed {
       )
       .join('\n');
   }
+
+  private simboloTropa(nome: string): string {
+    return `{black-bg}{green-fg}${nome[0].toUpperCase()}{/green-fg}{/black-bg}`;
+  }
+  
+  private simboloConstrucao(nome: string): string {
+    return `{black-bg}{red-fg}${nome[0].toUpperCase()}{/red-fg}{/black-bg}`;
+  }
+
 }
