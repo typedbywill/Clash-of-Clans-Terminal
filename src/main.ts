@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { Canhao } from './models/defesas/canhao';
+import { Morteiro } from './models/defesas/Morteiro';
 import { TorreDeArqueiras } from './models/defesas/torre-arqueira';
 import { ColetorDeElixir } from './models/recursos/coletorDeElixir';
 import { Arqueira } from './models/tropas/arqueira';
@@ -30,18 +31,16 @@ function criarTropas(): Array<TropaBase> {
 
 function criarConstrucoes(): Array<ConstrucaoBase> {
   const canhao = new Canhao(1);
-  canhao.x = 15;
-  canhao.y = 3;
+  canhao.x = 17;
+  canhao.y = 5;
 
-  const coletor = new ColetorDeElixir(1);
-  coletor.x = 17;
-  coletor.y = 6;
+  const coletor = new ColetorDeElixir(1, 17, 6);
 
-  const torreArqueira = new TorreDeArqueiras(1)
-  torreArqueira.x = 17
-  torreArqueira.y = 7
+  const torreArqueira = new TorreDeArqueiras(1, 17, 7)
 
-  return [canhao, coletor, torreArqueira];
+  const morteiro = new Morteiro(1, 17, 8)
+
+  return [canhao, coletor, torreArqueira, morteiro];
 
 }
 
