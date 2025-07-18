@@ -8,7 +8,7 @@ import { RenderizadorBlessed } from "../ui/RenderizadorBlessed";
 export class Simulador {
   private motorDeJogo: MotorDeJogo;
   private renderizador: RenderizadorBlessed;
-  private delay = 500;
+  private delay = 1000;
 
   constructor(
     tropas: UnidadeBase[],

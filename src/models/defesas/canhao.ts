@@ -1,7 +1,6 @@
-import { ConstrucaoBase } from '../generic/construcao';
-import { ConstrucaoDefensiva } from '../generic/construcao-defensiva';
+import { ConstrucaoDefensiva } from '../generic/construcao';
 
-export class Canhao extends ConstrucaoBase implements ConstrucaoDefensiva {
+export class Canhao extends ConstrucaoDefensiva {
   public danoPorSegundo: number;
   public alcance: number;
 

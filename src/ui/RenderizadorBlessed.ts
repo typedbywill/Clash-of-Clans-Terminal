@@ -8,8 +8,8 @@ export class RenderizadorBlessed {
   private box = blessed.box({
     top: 'center',
     left: 'center',
-    width: '80%',
-    height: '90%',
+    width: '100%',
+    height: '100%',
     tags: true,
     border: { type: 'line' },
     style: {

@@ -1,7 +1,6 @@
 // src/core/MotorDeJogo.ts
 
-import { ConstrucaoBase } from "../models/generic/construcao";
-import { ConstrucaoDefensiva } from "../models/generic/construcao-defensiva";
+import { ConstrucaoBase, ConstrucaoDefensiva } from "../models/generic/construcao";
 import { UnidadeBase } from "../models/generic/unidade";
 import { encontrarAlvo } from "./EstrategiaDeMira";
 import { movimentarTropa } from "./servicos/ServicoDeMovimento";

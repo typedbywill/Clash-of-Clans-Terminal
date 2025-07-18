@@ -37,3 +37,12 @@ export abstract class ConstrucaoBase {
 
   protected abstract melhorarAtributos(): void;
 }
+
+export abstract class ConstrucaoDefensiva extends ConstrucaoBase {
+  atacar(): number {
+    return 0; 
+  }
+  alcanceAtaque(): number {
+    return 0; 
+  }
+}
