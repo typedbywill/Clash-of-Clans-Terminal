@@ -13,8 +13,8 @@ export class Simulador {
   constructor(
     tropas: UnidadeBase[],
     construcoes: ConstrucaoBase[],
-    largura: number = 30,
-    altura: number = 30
+    largura: number = 40,
+    altura: number = 15
   ) {
     this.motorDeJogo = new MotorDeJogo(tropas, construcoes, largura, altura);
     this.renderizador = new RenderizadorBlessed();
